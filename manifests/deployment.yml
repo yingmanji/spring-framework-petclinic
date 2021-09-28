@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: springframeworkpetclinicv1 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springframeworkpetclinicv1
+  template:
+    metadata:
+      labels:
+        app: springframeworkpetclinicv1 
+    spec:
+      containers:
+        - name: springframeworkpetclinicv1 
+          image: yingmanjidr.azurecr.io/springframeworkpetclinicv1
+          ports:
+          - containerPort: 8080
